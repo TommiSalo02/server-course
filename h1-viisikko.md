@@ -23,7 +23,7 @@ Ennen tehtävän aloittamista kävin läpi annetut materiaalit ja tiivistän nii
 Aloitin tämän jälkeen Salt:in asentamisen ja testaamisen. Ohjeissa huomioitiin, että Salt edellyttää uuden pakettivaraston asentamista, joten tein tämän ohjeiden mukaisesti.
 
 ![image](https://github.com/user-attachments/assets/24c5fd91-47ac-4c17-922c-d0eb746bc513)
-__Uuden pakettivaraston asennus__
+* *Uuden pakettivaraston asennus* *
 
 Seuraavaksi asensin herran ja orjan virtuaalikoneelleni komennolla "sudo apt-get -y install salt-minion TAI salt-master". Tämän jälkeen on tärkeää innostuksissaan herpaantua kokonaan tehtävän ohjeista ja katsoa miten herra-orja localhost yhteys toimii. 
 
@@ -32,7 +32,8 @@ Komennolla "sudo nano /etc/salt/minion" pääsemme muokkaamaan "master" kohdan k
 Viimeisessä vaiheesssa komento "sudo salt key -A" hyväksyi vielä minion:in avaimen. Nopea yhteyskokeilu todisti yhteyden toimivan.
 
 ![image](https://github.com/user-attachments/assets/f09b8310-a74f-4cb0-990d-8d87bd033885)
-__Yhteyskokeilu__
+
+* *Yhteyskokeilu* *
 
 ## Tiivistelmä
 
