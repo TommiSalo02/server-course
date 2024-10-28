@@ -51,38 +51,51 @@ Käytin ensimmäiseksi "pkg.installed" tilafunktiota "tree" työkalun lataamisek
 
 ![image](https://github.com/user-attachments/assets/70bd741d-ee02-4323-8123-a74e1c5a7ba8)
 
-*idempotenssi demonstraatio*
+*Idempotenssi demonstraatio*
 
 Kokeilin seuraavaksi "file" komennolla tiedoston luomista ja muokkaamista.
 
 ![image](https://github.com/user-attachments/assets/d9377b77-d634-4d81-958a-1eb38159034f)
 
+*Tiedoston luominen*
+
 ![image](https://github.com/user-attachments/assets/f221922b-eefe-4241-b8c2-e578917ded5f)
+
+*Tiedoston sisällön muokkaaminen*
 
 ![image](https://github.com/user-attachments/assets/d75d80d2-7ab8-4654-a5b6-d1c5012a103d)
 
-Service
+*Luodun tiedoston lukeminen*
+
+Tämän jälken kokeilin "service" tilafunktiota. En ollut vielä asentanut esim. Apache2:sta, joten ajoin ylös ja alas sen sijaan "cups" tulostusohjelman. Ylös ajaessa sain taas demonstroitua idempotenssia, sillä valmiiksi päällä olevan ohjelman ylösajo ei tuota muutoksia.
 
 ![image](https://github.com/user-attachments/assets/883b5f2f-26a3-42ce-9001-ff0a348690c5)
 
-idempotenssi / cups
+*Idempotenssi demostraatio 2 / cups ylösajo*
 
 ![image](https://github.com/user-attachments/assets/8102627e-b200-4600-881f-7d6714d23f72)
 
-cups 2
+*Cups alasajo*
 
-luodaan ja poistetaan tommi 2
+Tein ja poistin myös käyttäjän "user" tilafunktiolla.
 
 ![image](https://github.com/user-attachments/assets/27d03688-c015-4d6e-a49c-1dc8f14bd38f)
 
+*Käyttäjä luotu*
+
 ![image](https://github.com/user-attachments/assets/ebd588c8-861f-4f6f-9ab2-a29d70e3230f)
 
-cmd höpötystä
+*Käyttäjä poistettu*
+
+Lopuksi demonstroin "cmd" tilafunktiota. Tämä tulisi suorittaa aikaisemmilla tilafunktioilla silloin kuin mahdollista (esimerkiksi tässä kohtaa "user"), sillä cmd ei varmista itsessään idempotenssia. "Create=" osio takaa tässä osassa idempotenssin.
 
 ![image](https://github.com/user-attachments/assets/24d5c165-aa9c-4e2f-a014-f58d28e2e9be)
+
+*Luodaan testitiedosto cmdillä*
+
 ![image](https://github.com/user-attachments/assets/c1feb89b-aaa5-46e3-b018-b0e7a240ac98)
 
-
+*Tiedosto luotu*
 
 ## Tiivistelmä
 
