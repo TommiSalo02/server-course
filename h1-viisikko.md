@@ -7,14 +7,17 @@ Ennen tehtävän aloittamista kävin läpi annetut materiaalit ja tiivistin niis
 1. Run Salt Command Locally
 
    -Saltia kannattaa kokeilla aluksi paikallisesti (Master ja Minion samalla koneella.
+   
    -Saltissa on viisi erityisen tärkeää komentoa; pkg, file, service, user ja cmd.
    
-3. Salt Quickstart
+2. Salt Quickstart
 
    -Salt on hyödyllinen, sillä sen avulla voidaan hallita lukuisia koneita niiden sijainnista huolimatta.
+   
    -Saltissa pääsee alkuun lataamalla sen, konfaamalla minionin ja hyväksymällä minionin avaimen masterilla.
 
-5. Raportin kirjoittaminen
+3. Raportin kirjoittaminen
+   
    -Raportointi on hyvä niin muiden kuin itsensäkin kannalta. Se toimii hyvin myös muistiinpanoina omaa toimintaa varten.
 
    -Raportin tulisi olla täsmällinen, jotta vianselvitys olisi mahdollisimman helppoa.
