@@ -27,12 +27,21 @@ Aloitin tämän jälkeen Salt:in asentamisen ja testaamisen. Ohjeissa huomioitii
 
 Seuraavaksi asensin herran ja orjan virtuaalikoneelleni komennolla "sudo apt-get -y install salt-minion TAI salt-master". Tämän jälkeen on tärkeää innostuksissaan herpaantua kokonaan tehtävän ohjeista ja katsoa miten herra-orja localhost yhteys toimii. 
 
-Komennolla "sudo nano /etc/salt/minion" pääsemme muokkaamaan "master" kohdan kommentista koodiksi ja korvaamaan sen kohteen "localhost":tiksi. Nyt tarvitsin enää nopean "systemctl restart" minion:ille ja sitten "systemctl start" molemmille osapuolille. 
+Komennolla "sudo nano /etc/salt/minion" pääsemme muokkaamaan "master" kohdan kommentista koodiksi ja korvaamaan sen kohteella "localhost". Nyt tarvitsin enää nopean "systemctl restart" minion:ille ja sitten "systemctl start" molemmille osapuolille. 
 
 Viimeisessä vaiheesssa komento "sudo salt key -A" hyväksyi vielä minion:in avaimen. Nopea yhteyskokeilu todisti yhteyden toimivan.
 
 ![image](https://github.com/user-attachments/assets/723a9c32-77f2-4e51-bff1-410515dc6828)
 *Yhteyskokeilu*
+
+Nyt kun tehtävän viimeinen kohta oli tehty, pystyin palata olennaiseen eli Saltin tilafunktioiden ja idempotentin testaamiseen. Käytin ensimmäiseksi "pkg.installed" tila funktiota "tree" työkalun lataamiseksi minionille. Demonstroin samalla idempotenssin, sillä saman komennon suorittaminen uudestaan ei tee mitään.
+
+![image](https://github.com/user-attachments/assets/020de379-5f1c-4f6e-b33e-582c89f0da3c)
+*pkg.install komento*
+
+![image](https://github.com/user-attachments/assets/70bd741d-ee02-4323-8123-a74e1c5a7ba8)
+*idempotenssi demonstraatio*
+
 
 
 ## Tiivistelmä
