@@ -98,3 +98,13 @@ Lopuksi demonstroin "cmd" tilafunktiota. Tämä tulisi suorittaa aikaisemmilla t
 *Tiedosto luotu*
 
 ## Lähteet
+
+Karvinen, Tero 2021. Run Salt Command Locally. Luettavissa: https://terokarvinen.com/2021/salt-run-command-locally/. Luettu 28.10.2024
+
+Karvinen, Tero 2018. Salt Quickstart - Salt Stack Master and Slave on Ubuntu Linux. Luettavissa: https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/. Luettu 28.10.2024
+
+Karvinen, Tero 2006. Raportin kirjoittaminen. Luettavissa: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Luettu 28.10.2024
+
+Pohjana Tero Karvinen 2024: Palvelinten hallinta -kurssi, http://terokarvinen.com
+
+Tätä dokumenttia saa kopioida ja muokata GNU General Public License (versio 2 tai uudempi) mukaisesti. http://www.gnu.org/licenses/gpl.html
