@@ -58,7 +58,16 @@ idempotenssi / cups
 ![image](https://github.com/user-attachments/assets/8102627e-b200-4600-881f-7d6714d23f72)
 cups 2
 
+luodaan ja poistetaan tommi 2
 
+![image](https://github.com/user-attachments/assets/27d03688-c015-4d6e-a49c-1dc8f14bd38f)
+
+![image](https://github.com/user-attachments/assets/ebd588c8-861f-4f6f-9ab2-a29d70e3230f)
+
+cmd höpötystä
+
+![image](https://github.com/user-attachments/assets/24d5c165-aa9c-4e2f-a014-f58d28e2e9be)
+![image](https://github.com/user-attachments/assets/c1feb89b-aaa5-46e3-b018-b0e7a240ac98)
 
 
 
