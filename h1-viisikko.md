@@ -8,12 +8,11 @@ Ennen tehtävän aloittamista kävin läpi annetut materiaalit ja tiivistän nii
 
    -Salt:tia kannattaa kokeilla aluksi paikallisesti (Master ja Minion samalla koneella)
    
-
-3. Salt Quickstart
+2. Salt Quickstart
 
    -Salt on hyödyllinen, sillä sen avulla voin hallita lukuisia koneita niiden sijainnista huolimatta.
 
-5. Raportin kirjoittaminen
+3. Raportin kirjoittaminen
    -Raportointi on hyvä niin muiden kuin itsensäkin kannalta. Se toimii myös muistiinpanoina omaa toimintaa varten.
 
    -Raportin tulisi olla täsmällinen, jotta vianselvitys olisi mahdollisimman helppoa.
@@ -21,7 +20,12 @@ Ennen tehtävän aloittamista kävin läpi annetut materiaalit ja tiivistän nii
    -Lähteet, tekstin selkeys ja raportin rakenne tulisi olla hallussa.
 
 ## Salt:in asennus ja testaus
-Aloitin tämän jälkeen Salt:in asentamisen ja testaamisen.
+Aloitin tämän jälkeen Salt:in asentamisen ja testaamisen. Ohjeissa huomioitiin, että Salt edellyttää uuden pakettivaraston asentamista, joten tein tämän ohjeiden mukaisesti.
+
+![image](https://github.com/user-attachments/assets/24c5fd91-47ac-4c17-922c-d0eb746bc513)
+Uuden pakettivaraston asennus
+
+
 
 ## Tiivistelmä
 
