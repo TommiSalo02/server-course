@@ -42,6 +42,24 @@ Nyt kun tehtävän viimeinen kohta oli tehty, pystyin palata olennaiseen eli Sal
 ![image](https://github.com/user-attachments/assets/70bd741d-ee02-4323-8123-a74e1c5a7ba8)
 *idempotenssi demonstraatio*
 
+Kokeilin seuraavaksi "file" komennolla tiedoston luomista ja muokkaamista.
+
+![image](https://github.com/user-attachments/assets/d9377b77-d634-4d81-958a-1eb38159034f)
+
+![image](https://github.com/user-attachments/assets/f221922b-eefe-4241-b8c2-e578917ded5f)
+
+![image](https://github.com/user-attachments/assets/d75d80d2-7ab8-4654-a5b6-d1c5012a103d)
+
+Service
+
+![image](https://github.com/user-attachments/assets/883b5f2f-26a3-42ce-9001-ff0a348690c5)
+idempotenssi / cups
+
+![image](https://github.com/user-attachments/assets/8102627e-b200-4600-881f-7d6714d23f72)
+cups 2
+
+
+
 
 
 ## Tiivistelmä
