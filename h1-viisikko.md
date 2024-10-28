@@ -32,14 +32,17 @@ Komennolla "sudo nano /etc/salt/minion" pääsemme muokkaamaan "master" kohdan k
 Viimeisessä vaiheesssa komento "sudo salt key -A" hyväksyi vielä minion:in avaimen. Nopea yhteyskokeilu todisti yhteyden toimivan.
 
 ![image](https://github.com/user-attachments/assets/723a9c32-77f2-4e51-bff1-410515dc6828)
+
 *Yhteyskokeilu*
 
 Nyt kun tehtävän viimeinen kohta oli tehty, pystyin palata olennaiseen eli Saltin tilafunktioiden ja idempotentin testaamiseen. Käytin ensimmäiseksi "pkg.installed" tila funktiota "tree" työkalun lataamiseksi minionille. Demonstroin samalla idempotenssin, sillä saman komennon suorittaminen uudestaan ei tee mitään.
 
 ![image](https://github.com/user-attachments/assets/020de379-5f1c-4f6e-b33e-582c89f0da3c)
+
 *pkg.install komento*
 
 ![image](https://github.com/user-attachments/assets/70bd741d-ee02-4323-8123-a74e1c5a7ba8)
+
 *idempotenssi demonstraatio*
 
 Kokeilin seuraavaksi "file" komennolla tiedoston luomista ja muokkaamista.
@@ -53,9 +56,11 @@ Kokeilin seuraavaksi "file" komennolla tiedoston luomista ja muokkaamista.
 Service
 
 ![image](https://github.com/user-attachments/assets/883b5f2f-26a3-42ce-9001-ff0a348690c5)
+
 idempotenssi / cups
 
 ![image](https://github.com/user-attachments/assets/8102627e-b200-4600-881f-7d6714d23f72)
+
 cups 2
 
 luodaan ja poistetaan tommi 2
