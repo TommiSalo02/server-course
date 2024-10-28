@@ -6,7 +6,7 @@ Ennen tehtävän aloittamista kävin läpi annetut materiaalit ja tiivistin niis
 
 1. Run Salt Command Locally
 
-   -Saltia kannattaa kokeilla aluksi paikallisesti (Master ja Minion samalla koneella.
+   -Saltia kannattaa kokeilla aluksi paikallisesti (Master ja Minion samalla koneella).
    
    -Saltissa on viisi erityisen tärkeää komentoa; pkg, file, service, user ja cmd.
    
@@ -87,7 +87,7 @@ Tein ja poistin myös käyttäjän "user" tilafunktiolla.
 
 *Käyttäjä poistettu*
 
-Lopuksi demonstroin "cmd" tilafunktiota. Tämä tulisi suorittaa aikaisemmilla tilafunktioilla silloin kuin mahdollista (esimerkiksi tässä kohtaa "user"), sillä cmd ei varmista itsessään idempotenssia. "Create=" osio takaa tässä osassa idempotenssin.
+Lopuksi demonstroin "cmd" tilafunktiota. Tämä tulisi suorittaa aikaisemmilla tilafunktioilla silloin kuin mahdollista (esimerkiksi tässä kohtaa "user"), sillä cmd ei varmista itsessään idempotenssia. "creates=" osio takaa tässä osassa idempotenssin.
 
 ![image](https://github.com/user-attachments/assets/24d5c165-aa9c-4e2f-a014-f58d28e2e9be)
 
@@ -96,7 +96,5 @@ Lopuksi demonstroin "cmd" tilafunktiota. Tämä tulisi suorittaa aikaisemmilla t
 ![image](https://github.com/user-attachments/assets/c1feb89b-aaa5-46e3-b018-b0e7a240ac98)
 
 *Tiedosto luotu*
-
-## Tiivistelmä
 
 ## Lähteet
