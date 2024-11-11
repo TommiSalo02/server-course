@@ -34,13 +34,27 @@ _Vagrant asennettu_
 
 Tämän jälkeen aloin luomaan virtuaaliympäristöä Vagrantilla. Sovelsin tässä kohdassa Karvisen artikkelia "Two Machine Virtual Network With Debian 11 Bullseye and Vagrant". Osa komenoista tuli muuttaa Windows-formattiin.
 
-Loin ensin uuden hakemiston `mkdir h2` ja hakeuduin sinne `cd h2`. Uuteen hakemistoon loin Notepadillä konfigurointi-tiedoston `Vagrantfile`, joka sisälsi artikkelin tarjoaman kofigurointitiedoston. Konfigurointitiedosto asentaa ja päivittää kahdet virtuaalikoneet (`t001` ja `t002`) käyttövalmiiksi ja antaa näille IP-osoitteet `192.168.88.101` & `192.168.88.102` verkossa `private_network` Jouduin vielä muuttamaan konfiguraatiotiedostossa debianin version uudemmaksi, elikkä `bookworm64`.
+Loin ensin uuden hakemiston `mkdir h2` ja hakeuduin sinne `cd h2`. Uuteen hakemistoon loin Notepadillä konfigurointi-tiedoston `Vagrantfile`, joka sisälsi artikkelin tarjoaman kofigurointitiedot. Konfigurointitiedot asentavat ja päivittävät kahdet virtuaalikoneet (`t001` ja `t002`) käyttövalmiiksi ja antavat näille IP-osoitteet `192.168.88.101` & `192.168.88.102` verkossa `private_network` Jouduin vielä muuttamaan konfiguraatiotiedoissa debianin version uudemmaksi, elikkä `bookworm64`.
 
 ![image](https://github.com/user-attachments/assets/7fc3c1a7-3b9e-4c66-a023-c78c3d93b89b)
 
 _Vagrant havaitsee konfigurointitiedoston_
 
-Konfiguroinnin jälkeen komento `vagrant up` asentaa palvelimet.
+Konfiguroinnin jälkeen komento `vagrant up` asentaa virtuaalikoneet.
+
+![image](https://github.com/user-attachments/assets/dc2af9a9-e88f-4ebe-81de-a19fd904c116)
+
+_Virtuaalikoneet valmiina_
+
+Kokeilin vielä ottamaan ssh yhteyden kumpaankin koneeseen ja tarkastamaan yhteydet.
+
+![image](https://github.com/user-attachments/assets/411859b9-8dd7-4d28-842b-823d66a1f102)
+
+![image](https://github.com/user-attachments/assets/003939e0-5aa2-4a1f-b324-a6fa7904be7b)
+
+_Yhteyskokeilut_
+
+Yhteyskokeilussä käy ilmi, että molemmat koneet saavat yhteyden toisiinsa sekä verkon ulkopuolelle. Koneilla on siis sisäverkko `192.168.88.0/24` ja NAT-verkko `10.0.2.0/24`.
 
 ### Lähteet
 
