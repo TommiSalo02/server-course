@@ -34,8 +34,13 @@ _Vagrant asennettu_
 
 Tämän jälkeen aloin luomaan virtuaaliympäristöä Vagrantilla. Sovelsin tässä kohdassa Karvisen artikkelia "Two Machine Virtual Network With Debian 11 Bullseye and Vagrant". Osa komenoista tuli muuttaa Windows-formattiin.
 
-Loin ensin uuden hakemiston `mkdir h2` ja hakeuduin sinne `cd h2`. Uuteen hakemistoon loin konfigurointi-tiedoston `Vagrantfiles`, joka sisälsi artikkelin tarjoaman komentokokonaisuuden. Konfigurointitiedosto asentaa ja päivittää kahdet virtuaalikoneet käyttövalmiiksi ja antaa näille IP-osoitteet... Jouduin vielä muuttamaan konfiguraatiotiedostossa debianin version uudemmaksi, elikkä `bookworm64`.
+Loin ensin uuden hakemiston `mkdir h2` ja hakeuduin sinne `cd h2`. Uuteen hakemistoon loin Notepadillä konfigurointi-tiedoston `Vagrantfile`, joka sisälsi artikkelin tarjoaman kofigurointitiedoston. Konfigurointitiedosto asentaa ja päivittää kahdet virtuaalikoneet (`t001` ja `t002`) käyttövalmiiksi ja antaa näille IP-osoitteet `192.168.88.101` & `192.168.88.102` verkossa `private_network` Jouduin vielä muuttamaan konfiguraatiotiedostossa debianin version uudemmaksi, elikkä `bookworm64`.
 
+![image](https://github.com/user-attachments/assets/7fc3c1a7-3b9e-4c66-a023-c78c3d93b89b)
+
+_Vagrant havaitsee konfigurointitiedoston_
+
+Konfiguroinnin jälkeen komento `vagrant up` asentaa palvelimet.
 
 ### Lähteet
 
