@@ -32,6 +32,9 @@ Voin valmiiksi olettaa Windowsin aiheuttavan itkua ja hampaanpuremista tehtävä
 
 _Vagrant asennettu_
 
+Tämän jälkeen aloin luomaan virtuaaliympäristöä Vagrantilla. Sovelsin tässä kohdassa Karvisen artikkelia "Two Machine Virtual Network With Debian 11 Bullseye and Vagrant". Osa komenoista tuli muuttaa Windows-formattiin.
+
+Loin ensin uuden hakemiston `mkdir h2` ja hakeuduin sinne `cd h2`. Uuteen hakemistoon loin konfigurointi-tiedoston `Vagrantfiles`, joka sisälsi artikkelin tarjoaman komentokokonaisuuden. Konfigurointitiedosto asentaa ja päivittää kahdet virtuaalikoneet käyttövalmiiksi ja antaa näille IP-osoitteet... Jouduin vielä muuttamaan konfiguraatiotiedostossa debianin version uudemmaksi, elikkä `bookworm64`.
 
 
 ### Lähteet
