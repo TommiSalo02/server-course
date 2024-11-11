@@ -2,7 +2,7 @@
 
 ## Johdanto
 
-Tehtävässä h2 tuli asentaa Vagrant ja harjoitella sen, sekä Saltin avulla kahden koneen herra-orja arkkitehtuuria. Vagrant ei ollut itselleni ennestään tuttu, joten aloitin tehtävän siihen tutustumalla ja asentamalla sen.
+Tehtävässä h2 tuli asentaa Vagrant ja harjoitella sen sekä Saltin avulla kahden koneen herra-orja arkkitehtuuria. Vagrant ei ollut itselleni entuudestaan tuttu, joten aloitin tehtävän siihen tutustumalla ja asentamalla sen.
 
 ## Ennakkomateriaali
 
@@ -18,10 +18,16 @@ Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves
 
 Salt contributors: Salt overview
 
-## Vagrant & virtuaalikoneet
+## Vagrant & virtuaalikoneet (A-C)
 
-Vagrant on ohjelma, jolla voi luoda virtuaalikoneita automaattisesti, joka nopeuttaa prosessia huomattavasti.
+Vagrantin kotisivuilta sain selville, että Vagrant on ohjelma, jolla voi luoda ja hallita virtuaalikoneita. Tämä helpottaa ja nopeuttaa prosessia suuresti verrattuna manuaaliseen vaihtoehtoon. 
+
+Latasin ensin Vagrantin kannettavalleni. Valitsin Windows version `AMD64 2.4.2`, sillä kannettavani pyörii Windowsilla. Nopean SetUp-velhoilun ja koneen uudelleenkäynnistämisen jälkeen Vagrant oli asennettuna.
+
+![image](https://github.com/user-attachments/assets/fea407a8-5821-4e74-b70c-d5b9643ff882)
+
+_Vagrant asennettu_
 
 ### Lähteet
 
-Vagrant: Get Started. Luettavissa: https://www.vagrantup.com/](https://developer.hashicorp.com/vagrant/tutorials/getting-started?product_intent=vagrant
+Vagrant: Get Started. Luettavissa: https://developer.hashicorp.com/vagrant/tutorials/getting-started/getting-started-index.
