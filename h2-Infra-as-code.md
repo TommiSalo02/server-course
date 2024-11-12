@@ -10,9 +10,13 @@ Tehtävässä h2 tuli asentaa Vagrant ja harjoitella sen sekä Saltin avulla kah
 
 - Karvisen artikkeli "Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux" on tuttu jo h1 tehtävän raportista. Artikkeli käsittelee Saltin asennusta ja toimintaa.
 
-- Karvisen artikkeli "Hello Salt Infra-as-Code" syventyy Saltin käyttöön. Saltissa konfigurointitiedostoa kutsutaan nimellä "state" eli tila. Jos haluamme kirjoittaa "infraa koodina", voimme luoda tila-tiedoston, jonka Salt voi ottaa koneille käyttöön komennolla `state.apply`. Tämän avulla voimme saada idempotenttia, helposti seurattavaa, helposti käyttöönotettavaa ja helposti laajennettavaa konfigurointia palvelimillemme Saltin avulla.
+- Karvisen artikkeli "Hello Salt Infra-as-Code" syventyy Saltin käyttöön. Saltissa konfigurointitiedostoa kutsutaan nimellä "state" eli tila. Jos haluamme kirjoittaa "infraa koodina", voimme luoda tila-tiedoston (kansiossa `hello`, jonka Salt voi ottaa koneille käyttöön komennolla `state.apply hello`. Tämän avulla voimme saada idempotenttia, helposti seurattavaa, helposti käyttöönotettavaa ja helposti laajennettavaa konfigurointia palvelimillemme Saltin avulla.
+
+Seuraava asken on luoda `top.sls` tiedosto, joka määrittää sen, mitä tilaa kukin kone käyttää. Tämän johdosta emme tarvitse enää edes tiedostosijaintia komennossa `state apply`, vaan se konfiguroi kaikki automaattisesti `top.sls` tiedostoon nojaten.
 
 - Karvisen artikkeli "Salt Vagrant - automatically provision one master and two slaves" antoi vielä täsmälliset komennot Salt tilatiedoston luomiseen ja käyttöönottoon.
+
+- Artikkeli "Salt overview" antoi vielä tietoa `YAML` merkintäkielestä, jota Salt käyttää. YAML koostuu kolmesta eri elementistä: skaalarit / avain-arvo-parit (vihannes: herneet), listat (vihannekset: - herneet - porkkanat) ja sanakirjat (illallinen: alkupala: herneet pääruoka: - pihvi - ranut). YAML vaatii tarkkaa kirjoitusta/sisennystä, jotta se toimisi.
 
 ### Lähteet
 
