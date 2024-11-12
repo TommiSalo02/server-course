@@ -70,7 +70,7 @@ Yhteyskokeilussä käy ilmi, että molemmat koneet saavat yhteyden toisiinsa sek
 
 Saltin asennusta ennen asensin ensin pakettivaraston, kuten tein tehtävässä h1. 
 
-Tässä vaiheessa muistin PowerShellin olemassaolon, sillä koitin käyttää copy + paste ominaisuutta. Siirryin pikaisesti sen käyttöön. Sitten testasin copy + pastea Powershellissä, ja sirryin nopeasti Windows Terminaalin käyttöön. Windows terminaali on terminaalisovellus joka tarjoaa paremman käyttöliittymän ja uusia ominaisuuksia.
+Tässä vaiheessa muistin PowerShellin olemassaolon, sillä koitin käyttää copy + paste ominaisuutta. Siirryin pikaisesti sen käyttöön. Sitten testasin copy + pastea Powershellissä, ja sirryin nopeasti Windows Terminaalin käyttöön. Windows terminaali on terminaalisovellus joka tarjoaa paremman käyttöliittymän ja uusia ominaisuuksia kuten helppo copy + paste ja useampi samanaikainen terminaali-ikkuna.
 
 Saltin pakettivaraston asennus ei aluksi onnistunut, sillä `curl`-komento puuttui. Latasin tämän molemmille koneille, mutta seuraavaksi GPG avainta ladatessa tuli virheilmoitus.
 
@@ -87,6 +87,11 @@ curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltPr
 
 echo "deb [signed-by=/etc/apt/keyrings/salt-archive-keyring-2023.pgp arch=amd64] https://packages.broadcom.com/artifactory/saltproject-deb/ stable main" | sudo tee /etc/apt/sources.list.d/salt.list
 ```
+Tämä komento meni läpi. Asensin vielä tuttuun tapaan herran koneelle `t001` ja orjan koneelle `t002`. Tässä vaiheessa hyödyllinen komento herra-koneella on `hostname -I`. Tätä kautta sain tutun NAT-osoitteen ja sisäverkon osoitteen. Löin jälkimmäisen orja-koneen konfigurointi-tiedostoon, käynnistin sen uudestaan ja hyväksyin sitten herra-koneella avaimen.
+
+![image](https://github.com/user-attachments/assets/63faaa95-22c3-4866-a196-db392e970fd3)
+
+_Avain hyväksytty_
 
 ### Lähteet
 
