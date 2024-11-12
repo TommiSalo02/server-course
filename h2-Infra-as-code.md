@@ -66,6 +66,32 @@ _Yhteyskokeilut_
 
 Yhteyskokeilussä käy ilmi, että molemmat koneet saavat yhteyden toisiinsa sekä verkon ulkopuolelle. Koneilla on siis sisäverkko `192.168.88.0/24` ja NAT-verkko `10.0.2.0/24`.
 
+## Salt herra-orja (Kohdat D-H)
+
+Saltin asennusta ennen asensin ensin pakettivaraston, kuten tein tehtävässä h1. 
+
+Tässä vaiheessa muistin PowerShellin olemassaolon, sillä koitin käyttää copy + paste ominaisuutta. Siirryin pikaisesti sen käyttöön. Sitten testasin copy + pastea Powershellissä, ja sirryin nopeasti Windows Terminaalin käyttöön. Windows terminaali on terminaalisovellus joka tarjoaa paremman käyttöliittymän ja uusia ominaisuuksia.
+
+Saltin pakettivaraston asennus ei aluksi onnistunut, sillä `curl`-komento puuttui. Latasin tämän molemmille koneille, mutta seuraavaksi GPG avainta ladatessa tuli virheilmoitus.
+
+![image](https://github.com/user-attachments/assets/4fe0f789-6ab9-4afb-967a-23f5a33bdd12)
+
+_Could not resolve host_
+
+Nopealla tarkastuksella Saltin kotisivuilta huomasin, että repo oli siirretty osoitteeseen `packages.broadcom.com`. Täten suoritin h1 osion komennot, mutta korjasin osoitteen muutoksen mukaiseksi.
+
+```
+sudo mkdir -p /etc/apt/keyrings
+
+curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring-2023.pgp
+
+echo "deb [signed-by=/etc/apt/keyrings/salt-archive-keyring-2023.pgp arch=amd64] https://packages.broadcom.com/artifactory/saltproject-deb/ stable main" | sudo tee /etc/apt/sources.list.d/salt.list
+```
+
 ### Lähteet
+
+https://saltproject.io/blog/salt-project-package-repo-migration-and-guidance/
+
+## Yleiset lähteet
 
 Vagrant: Get Started. Luettavissa: https://developer.hashicorp.com/vagrant/tutorials/getting-started/getting-started-index.
