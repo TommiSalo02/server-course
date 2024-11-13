@@ -133,7 +133,23 @@ Tämän jälkeen kokeilin ajaa sen muutamaan kertaan ja tarkistamaan lopputuloks
 
 _package.installed häiriö_
 
-Tämä ei kuitenkaan toiminut, sillä Saltin `package_install` tilafunktiossa on jotain häikkää. Koitin ladata tiedostoja uudelleen ja tarkkailla debug/logi toimintoja, mutta en saanut selville virheel alkuperää. Saltin asennuksessa on todennäköiseseti ollut jotain häikkää. Ratkaisen ongelman tähän hätään tekemällä saman toiminnon, mutta suoraan komentorivillä.
+Tämä ei kuitenkaan toiminut, sillä Saltin `package_install` tilafunktiossa on jotain häikkää. Koitin ladata tiedostoja uudelleen ja tarkkailla debug/logi toimintoja, mutta en saanut selville virheel alkuperää. Saltin asennuksessa on todennäköiseseti ollut jotain häikkää. Ratkaisen ongelman tähän hätään tekemällä saman toiminnon, mutta suoraan komentorivillä. Idempotensiin päästään yhä lisäämällä `- unless`-rivi, joka tarkistaa onko pakkaus jo asennettu.
+
+![image](https://github.com/user-attachments/assets/98d65b63-f38b-408e-8c35-fcbe4cfea70e)
+
+_Uusi init.sls_
+
+![image](https://github.com/user-attachments/assets/9a5db778-bc03-46eb-8466-d4ecc656af3e)
+
+![image](https://github.com/user-attachments/assets/89f84f90-cf77-4964-b810-d3f1f64405ed)
+
+_Idempotenssi_
+
+Katsoin vielä `cat` ja `--version` komennoilla, että minion oli todella saanut ja suorittanut käskyn.
+
+![image](https://github.com/user-attachments/assets/dbb0ec3a-e365-4303-8a9d-1020fb60ccf6)
+
+Seuraavaksi konfiguroin vielä `init.sls` tiedoston 
 
 ### Lähteet
 
