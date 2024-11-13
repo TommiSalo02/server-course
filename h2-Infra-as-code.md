@@ -141,7 +141,17 @@ Seuraavaksi konfiguroin toisen `init.sls` tiedoston joka tarkistaa ssh:n olevan 
 
 ![image](https://github.com/user-attachments/assets/2d36a502-c970-46bf-a253-3d35c8a6e2ee)
 
+En lähtenyt vielä testaamaan sitä sellaisenaan, vaan loin `top.sls`-tilatiedoston, jonka avulla voin ajaa niin `packfile`, kuin `servusr` tilat yhdellä komennolla.
 
+![image](https://github.com/user-attachments/assets/47186126-3385-4a25-8622-9e06449023bc)
+
+Ajoin `top.sls`-tilatiedoston komennolla `sudo salt '*' state.apply`.
+
+![image](https://github.com/user-attachments/assets/d6270f19-81d5-4868-8df7-7734d5a83696)
+
+_Top.sls ajo_
+
+`Top.sls`-tilatiedoston ajo toimi ja osoitti seuraavilla ajoilla idempotenssin.
 
 ### Lähteet
 
