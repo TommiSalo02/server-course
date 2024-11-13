@@ -93,6 +93,30 @@ Tämä komento meni läpi. Asensin vielä tuttuun tapaan herran koneelle `t001` 
 
 _Avain hyväksytty_
 
+Tämän jälkeen käskin orjaa kertomaan nimensä komennolla `cmd.run hostname`. Tätä kautta tiesin, että yhteys toimii ja voin komentaa konetta `t002`.
+
+![image](https://github.com/user-attachments/assets/7b838127-22ee-4846-9fc4-056429428a1e)
+
+_Komento ajettu orjassa_
+
+Seuraavaksi loin kansions `/srv/salt/`, johon laitan kaikki Saltin komentamiseen vaadittavat tiedostot. Ensimmäistä osiota varten luon vielä kansion `/srv/salt/test`, jonne luon konfigurointitiedoston `init.sls`. Tämä konfiguraatio luo testitiedoston `/tmp` kansioon ja `file.managed` osuus takaa sen olevan idempotentti.
+
+![image](https://github.com/user-attachments/assets/43171b1c-2db8-4280-8dbf-50c206ce1220)
+
+_Kansio ja komento_
+
+Tämän jälkeen ajoin komennon ensin paikallisesti ja sitten verkon yli orjalla.
+
+![image](https://github.com/user-attachments/assets/e1ec585b-d0d4-4f9d-a415-611d9aaef5b8)
+
+_Paikallinen idempotentti ajo_
+
+![image](https://github.com/user-attachments/assets/7f4b6d70-90b0-4d62-b57c-5ba50ebbcd2b)
+
+_Idempotentti ajo orjalla_
+
+
+
 ### Lähteet
 
 https://saltproject.io/blog/salt-project-package-repo-migration-and-guidance/
