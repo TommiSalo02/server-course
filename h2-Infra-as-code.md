@@ -66,6 +66,10 @@ _Yhteyskokeilut_
 
 Yhteyskokeilussä käy ilmi, että molemmat koneet saavat yhteyden toisiinsa sekä verkon ulkopuolelle. Koneilla on siis sisäverkko `192.168.88.0/24` ja NAT-verkko `10.0.2.0/24`.
 
+### Lähteet
+
+Vagrant: Getting started. Luettavissa: https://developer.hashicorp.com/vagrant/tutorials/getting-started. Luettu 12.11.2024.
+
 ## Salt herra-orja (Kohdat D-H)
 
 Saltin asennusta ennen asensin ensin pakettivaraston, kuten tein tehtävässä h1. 
@@ -155,8 +159,11 @@ _Top.sls ajo_
 
 ### Lähteet
 
-https://saltproject.io/blog/salt-project-package-repo-migration-and-guidance/
+mrxpalmeiras: Salt Cheat Sheet. Luettavissa: https://sites.google.com/site/mrxpalmeiras/saltstack/salt-cheat-sheet. Luettu 12.11.2024
+SaltProject: Salt Project Package Repository (repo.saltproject.io) Migration and Guidance. Luettavissa: https://saltproject.io/blog/salt-project-package-repo-migration-and-guidance/. Luettu 12.11.2024
 
 ## Yleiset lähteet
 
-Vagrant: Get Started. Luettavissa: https://developer.hashicorp.com/vagrant/tutorials/getting-started/getting-started-index.
+Pohjana Tero Karvinen 2024: Palvelinten hallinta -kurssi, http://terokarvinen.com
+
+Tätä dokumenttia saa kopioida ja muokata GNU General Public License (versio 2 tai uudempi) mukaisesti. http://www.gnu.org/licenses/gpl.html
