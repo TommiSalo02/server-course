@@ -119,7 +119,7 @@ _Idempotentti ajo orjalla_
 
 _Testi.txt orjalla_
 
-Seuraavaksi tuli luoda .sls tiedosto joka hyödyntää vähintään kahta tilafunktiota ja todentaa sen toiminnan onnistuminen. Loin tätä varten `packfile` tilakansion, joka lataa `tree` työkalun ja luo tiedoston `pkg.install` ja `file.managed` tilafunktioilla..
+Seuraavaksi tuli luoda .sls tiedosto joka hyödyntää vähintään kahta tilafunktiota ja todentaa sen toiminnan onnistuminen. Loin tätä varten `packfile` tilakansion, joka lataa `tree`-työkalun ja luo tiedoston `pkg.install` & `file.managed` tilafunktioilla.
 
 ![image](https://github.com/user-attachments/assets/21a5988b-4f5c-42da-8d30-7fe9dbe3c114)
 
@@ -137,7 +137,11 @@ Lopuksi tarkistin vielä tulokset minionilta.
 
 ![image](https://github.com/user-attachments/assets/ac4f0d95-bf33-469e-817f-3d804125a382)
 
-Seuraavaksi konfiguroin vielä `init.sls` tiedoston 
+Seuraavaksi konfiguroin toisen `init.sls` tiedoston joka tarkistaa ssh:n olevan käytössä ja luo uuden testikäyttäjän `service.running` ja `user.present` -tilafunktioilla.
+
+![image](https://github.com/user-attachments/assets/2d36a502-c970-46bf-a253-3d35c8a6e2ee)
+
+
 
 ### Lähteet
 
