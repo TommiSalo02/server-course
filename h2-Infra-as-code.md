@@ -127,7 +127,13 @@ Ensimmäiseksi loin `packfile` tilakansion, joka lataa `tree` työkalun ja luo t
 
 _Packfile tilakansio_
 
+Tämän jälkeen kokeilin ajaa sen muutamaan kertaan ja tarkistamaan lopputulokset.
 
+![image](https://github.com/user-attachments/assets/7b3873c1-8975-422f-b41a-670b2adf99a5)
+
+_package.installed häiriö_
+
+Tämä ei kuitenkaan toiminut, sillä Saltin `package_install` tilafunktiossa on jotain häikkää. Koitin ladata tiedostoja uudelleen ja tarkkailla debug/logi toimintoja, mutta en saanut selville virheel alkuperää. Saltin asennuksessa on todennäköiseseti ollut jotain häikkää. Ratkaisen ongelman tähän hätään tekemällä saman toiminnon, mutta suoraan komentorivillä.
 
 ### Lähteet
 
