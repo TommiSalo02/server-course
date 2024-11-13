@@ -119,18 +119,23 @@ _Idempotentti ajo orjalla_
 
 _Testi.txt orjalla_
 
-Seuraavaksi tuli luoda .sls tiedosto joka hyödyntää vähintään kahta tilafunktiota ja todentaa sen toiminnan onnistuminen. Loin samalla toisen .sls tiedoston sillä raportin viimeinen osuus, joka käsittelee `top.sls` tiedostoa, vaatii vähintään kahdet .sls tiedostot toimiakseen.
+Seuraavaksi tuli luoda .sls tiedosto joka hyödyntää vähintään kahta tilafunktiota ja todentaa sen toiminnan onnistuminen. Loin tätä varten `packfile` tilakansion, joka lataa `tree` työkalun ja luo tiedoston `pkg.install` ja `file.managed` tilafunktioilla..
 
-Ensimmäiseksi loin `packfile` tilakansion, joka lataa `tree` työkalun ja luo tiedoston.
+![image](https://github.com/user-attachments/assets/21a5988b-4f5c-42da-8d30-7fe9dbe3c114)
 
-![image](https://github.com/user-attachments/assets/0c931b41-67cc-4ac4-83d7-b2fd9aabcabf)
+Tämän jälkeen kokeilin ajaa sen muutamaan kertaan.
 
-_Packfile tilakansio_
+![image](https://github.com/user-attachments/assets/4ae988fb-780a-4140-adca-b5829579a6d4)
 
-Tämän jälkeen kokeilin ajaa sen muutamaan kertaan ja tarkistamaan lopputulokset.
+_Packfilen ajo_
 
+![image](https://github.com/user-attachments/assets/c63023bf-4596-4dc7-857a-f144a5d5ddd7)
 
+_Idempotenssi_
 
+Lopuksi tarkistin vielä tulokset minionilta.
+
+![image](https://github.com/user-attachments/assets/ac4f0d95-bf33-469e-817f-3d804125a382)
 
 Seuraavaksi konfiguroin vielä `init.sls` tiedoston 
 
