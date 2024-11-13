@@ -20,15 +20,15 @@ Tehtävässä h2 tuli asentaa Vagrant ja harjoitella sen sekä Saltin avulla kah
 
 ### Lähteet
 
-Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant
+Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/. Luettu: 12.11.2024
 
-Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux
+Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux. Luettavissa: https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/. Luettu: 12.11.2024
 
-Karvinen 2014: Hello Salt Infra-as-Code
+Karvinen 2014: Hello Salt Infra-as-Code. Luettavissa: https://terokarvinen.com/2024/hello-salt-infra-as-code/. Luettu: 12.11.2024
 
-Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves
+Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves. Luettavissa: https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file. Luettu: 12.11.2024
 
-Salt contributors: Salt overview
+Salt contributors: Salt overview. Luettavissa: https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml. Luettu: 12.11.2024
 
 ## Vagrant & virtuaalikoneet (A-C)
 
