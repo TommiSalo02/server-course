@@ -115,6 +115,18 @@ _Paikallinen idempotentti ajo_
 
 _Idempotentti ajo orjalla_
 
+![image](https://github.com/user-attachments/assets/23e59d05-3859-417d-bf03-a1c4f6027a15)
+
+_Testi.txt orjalla_
+
+Seuraavaksi tuli luoda .sls tiedosto joka hyödyntää vähintään kahta tilafunktiota ja todentaa sen toiminnan onnistuminen. Loin samalla toisen .sls tiedoston sillä raportin viimeinen osuus, joka käsittelee `top.sls` tiedostoa, vaatii vähintään kahdet .sls tiedostot toimiakseen.
+
+Ensimmäiseksi loin `packfile` tilakansion, joka lataa `tree` työkalun ja luo tiedoston.
+
+![image](https://github.com/user-attachments/assets/0c931b41-67cc-4ac4-83d7-b2fd9aabcabf)
+
+_Packfile tilakansio_
+
 
 
 ### Lähteet
