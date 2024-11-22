@@ -21,4 +21,18 @@ Latasin ensin Apachen manuaalisesti virtuaalikoneelleni. Tämä järjestyy komen
 
 _Apache toimii? Apache toimii! Apache toimii._
 
-Seuraavaksi käytin komentoa `sudo apt-get remove apache2` poistaakseni Apachen. Tämän jälkeen voin tehdä `.sls`-tiedoston, jolla voin ladata, konfiguroida ja käynnistää Apachen.
+Seuraavaksi käytin komentoa `sudo apt-get remove apache2` poistaakseni Apachen. Tämän jälkeen voin tehdä `init.sls`-tiedoston uuteen `apache`-kansioon, jolla voin ladata, konfiguroida ja käynnistää Apachen. Lisäsin samalla osion, joka käskee apachea pyörimään orjan ip-osoitteessa, jotta voisin tarkistaa sen herralla.
+
+![image](https://github.com/user-attachments/assets/2f48a659-4c65-4ca5-adde-d147c9632bbd)
+
+_Apache init.sls konfigurointi_
+
+![image](https://github.com/user-attachments/assets/e0650203-d226-4cf1-ac3d-de145283da20)
+
+_Idempotentti Apache_
+
+![image](https://github.com/user-attachments/assets/7d60e4ab-fb76-4422-949b-53eb96df55f2)
+
+_Orjan Apache herran koneelta_
+
+Poistin seuraavaksi Apachen tiedostot koneilta ja siirryin seuraavaan tehtävään.
