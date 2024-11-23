@@ -2,7 +2,7 @@
 
 ## Johdanto
 
-Tehtävässä h3 tuli tutustua Apacheen ja SSH-porttikuunteluun. Lisäksi tuli valita aihe kurssin omalle moduulille. Valitsin itse x, sillä...
+Tehtävässä h3 tuli tutustua Saltin käyttöön Apachen ja OpenSSH:n parissa. Samalla tuli tuumia valmiiksi tulevan moduulin aihetta.
 
 ## Ennakkomateriaalit
 
@@ -91,5 +91,10 @@ Käytin taas `curl`-työkalua localhost-sivun tarkastelemiseksi. Sivusto oli muu
 
 ### Lähteet
 
-https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-20-04
+Digital Ocean: How To Set Up Apache Virtual Hosts on Ubuntu 20.04. Luettavissa: https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-20-04. Luettu 23.11.2024
 
+## Yleiset lähteet
+
+Pohjana Tero Karvinen 2024: Palvelinten hallinta -kurssi, http://terokarvinen.com
+
+Tätä dokumenttia saa kopioida ja muokata GNU General Public License (versio 2 tai uudempi) mukaisesti. http://www.gnu.org/licenses/gpl.html
