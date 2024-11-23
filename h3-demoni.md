@@ -50,3 +50,25 @@ Tarkastin seuraavaksi portin olevan auki `netcat`-työkalulla.
 ![image](https://github.com/user-attachments/assets/411809db-d8ce-4255-842c-2cbdcd9a1718)
 
 Portti 22 ja 2222 ovat auki kuten määrittelin, kun taas hypoteettinen portti 2221 on kiinni.
+
+Seuraavaksi tein saman hyödyntäen `init.sls`-tiedostoa Saltissa. Loin uuden kansion `saltssh`, johon lisäsin `init.sls`-tiedoston. Kopioin tähän tiedostoon ennakkomateriaalin artikkelissa mainitun konfiguraation.
+
+![image](https://github.com/user-attachments/assets/fdb12fdf-85f5-479e-8ba9-7c8773009440)
+
+_SaltSSH init.sls_
+
+Tämä konfiguraatio tarkistaa, että OpenSSH on ladattu, synkronisoi Saltin root-kansiossa olevan `sshd_config`-tiedoston orjalle ja käynnistää `ssh`-palvelun uudestaan.
+
+Kopion vielä aikaisemman `sshd-config`-tiedoston komennolla: `cp /etc/ssh/sshd_config /srv/salt/sshd_config` ja ajoin sen jälkeen tilan orjalle.
+
+![image](https://github.com/user-attachments/assets/6451eec9-670c-4f39-9e2f-d66904147e05)
+
+_Idempotentti saltssh_
+
+Kokeilin lopputuloksia taas `netcat`-työkalulla. Vedin tässä vaiheessa verkon pois kannettavasta, vaikka se ei suoranaisesti olisi tarpeellista. 
+
+![image](https://github.com/user-attachments/assets/557ed08c-ebfa-46d1-a0f4-3263199ccc43)
+
+_Porttikokeilut herralta orjalle_
+
+Porttiasetukset olivat muuttuneet halutulla tavalla Salttia hyödyntäen.
