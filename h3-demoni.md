@@ -35,4 +35,18 @@ _Idempotentti Apache_
 
 _Orjan Apache herran koneelta_
 
-Poistin seuraavaksi Apachen tiedostot koneilta ja siirryin seuraavaan tehtävään.
+Poistin seuraavaksi Apachen ja siiryyin seuraavaan tehtävään.
+
+## SSH (Kohta B)
+
+Lisäsin ensin SSH-portin manuaalisesti. Tämä järjestyi muokkaamalla konfigurointitiedostoa osoitteessa `/etc/ssh/sshd_config`. Konfigurointitiedostossa portti 22 (vagrant) on mainittu, mutta sen konfigurointi on jätetty kommentiksi. Tästä voisi päätellä, että se on oletuksena käytössä jo jonkun muun reitin kautta. Poistin kommentit ja lisäsin satunnaisen portin (tässä tapauksessa 2222) kokeilua varten.
+
+![image](https://github.com/user-attachments/assets/1f70affb-e107-4cb6-9757-4764d467a2cc)
+
+_SSH-konfigurointi_
+
+Tarkastin seuraavaksi portin olevan auki `netcat`-työkalulla.
+
+![image](https://github.com/user-attachments/assets/411809db-d8ce-4255-842c-2cbdcd9a1718)
+
+Portti 22 ja 2222 ovat auki kuten määrittelin, kun taas hypoteettinen portti 2221 on kiinni.
