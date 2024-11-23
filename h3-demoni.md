@@ -35,8 +35,6 @@ _Idempotentti Apache_
 
 _Orjan Apache herran koneelta_
 
-Poistin seuraavaksi Apachen ja siiryyin seuraavaan tehtävään.
-
 ## SSH (Kohta B)
 
 Lisäsin ensin SSH-portin manuaalisesti. Tämä järjestyi muokkaamalla konfigurointitiedostoa osoitteessa `/etc/ssh/sshd_config`. Konfigurointitiedostossa portti 22 (vagrant) on mainittu, mutta sen konfigurointi on jätetty kommentiksi. Tästä voisi päätellä, että se on oletuksena käytössä jo jonkun muun reitin kautta. Poistin kommentit ja lisäsin satunnaisen portin (tässä tapauksessa 2222) kokeilua varten.
@@ -72,3 +70,26 @@ Kokeilin lopputuloksia taas `netcat`-työkalulla. Vedin tässä vaiheessa verkon
 _Porttikokeilut herralta orjalle_
 
 Porttiasetukset olivat muuttuneet halutulla tavalla Salttia hyödyntäen.
+
+## Apache weppisivu (Kohta D)
+
+Siirryin vielä luomaan Apache-sivun, joka vastaa tehtävän vaatimuksia (tiedostot kotihakemistossa, voi muokata ilman sudoa). Loin ensin käyttäjän "webuser", jonka kotihakemistossa Apache pyörii. Lisäsin tämän käyttäjän kotihakemistoon `public-html`-kansion, johon sisälsin `index.html`-tiedoston. Säädöin samalla käyttöoikeudet kohilleen.
+
+![image](https://github.com/user-attachments/assets/db19908f-c7b6-4afd-8de2-1fc6a66b6caf)
+
+_Tilannekatsaus_
+
+Seuraavaksi suuntasin `VirtualHost`-tiedostoon ja konfiguroin sen `DocumentRoot`-osion omaksi `public-html`-hakemistokseni.
+
+![image](https://github.com/user-attachments/assets/fd78af91-b5e7-488e-9cc1-334a8c031232)
+
+_Apache toiminnassa._
+
+Käytin taas `curl`-työkalua localhost-sivun tarkastelemiseksi. Sivusto oli muuttunut haluamaksemme ja pystyin muokata sitä myös ilman sudo-oikeuksia.
+
+
+
+### Lähteet
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-20-04
+
