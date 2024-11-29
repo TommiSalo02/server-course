@@ -12,6 +12,12 @@ _Alustava suunnitelma_
 
 Käytin palvelinten asentamiseen Vagranttia, sillä se on tehokas tapa luoda uusia palvelimia projektia varten ja se sopii hyvin kurssin `Infrastructure as code`-teemaan. Asensin ensin kahdet palvelimet, joista toinen on palvelin johon muodostetaan VPN yhteys ja toinen on palvelin, johon Wireguard konfiguroidaan.
 
+Asensin palvelimet uuteen kansioon `wireguard-project`. Wireguardia varten loin konfigurointitiedoston `Vagrantfile`. 
+
+```
+Vagrantfile here
+```
+
 ## Wireguard manuaalisesti
 
 ## Palvelimet osa 2.
