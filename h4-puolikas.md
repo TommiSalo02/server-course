@@ -38,6 +38,11 @@ _vagrant@server_
 
 _vagrant@client_
 
+Seuraavaksi loin avaimet yhteyttä varten molemmilla koneilla.
+
+![image](https://github.com/user-attachments/assets/fafaf1a1-28df-4cfd-bcf3-35b2964cd935)
+
+
 ### Lähteet
 
 https://www.wireguard.com/quickstart/
