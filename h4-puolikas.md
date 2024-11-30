@@ -45,16 +45,22 @@ Seuraavaksi loin avaimet yhteyttä varten molemmilla koneilla.
 Olin aikaisemmin konfiguroinut Wireguardia konfigurointi-tiedostolla (jolla teen myös lopullisen moduulin), mutta tällä kertaa halusin harjoittella ensin yhteyden luomista komennoilla.
 
 ```
+# Luodaan uusi wireguard (wg0) interface.
 ip link add dev wg0 type wireguard
 
+# Annetaan wg0 ip-osoite
 ip addr add 10.0.0.1/24 dev wg0 
 
+# Noudetaan yksityinen avain luodusta tiedostosta
 wg set wg0 private-key ./privatekey
 
+# Käynnistetään interface
 ip link set wg0 up
 
+# Määritetään kuunteleva portti 51820
 wg set wg0 listen-port 51820
 
+# Määritetään osoite johon otetaan yhteys julkisen avaimen kera
 sudo wg set wg0 peer FSao085rtXF/r2/cHxyH3yZNmGeeGk68039I0hd93zw= allowed-ips 10.0.0.2/32 endpoint 192.168.12.102:51820
 ```
 
