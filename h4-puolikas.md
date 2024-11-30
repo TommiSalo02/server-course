@@ -14,7 +14,7 @@ Käytin palvelinten asentamiseen Vagranttia, sillä se on tehokas tapa luoda uus
 
 Asensin palvelimet uuteen kansioon `wireguard-project`. Vagranttia varten loin konfigurointitiedoston `Vagrantfile`. Tiedoston luomisen jälkeen palvelimet voi luoda komennolla `vagrant up`.
 
-![image](https://github.com/user-attachments/assets/76ca7408-f430-458d-9bca-fc9d21b612f6)
+![image](https://github.com/user-attachments/assets/eabce949-dd06-4898-bb92-629273c23fc9)
 
 _Ensimmäset palvelimet_
 
@@ -22,7 +22,19 @@ _Ensimmäset palvelimet_
 
 _vagrant up_
 
+Palvelinten luomisen jälkeen asensin `Wireguard`-sovelluksen
+
+### Lähteet
+
+https://terokarvinen.com/2023/salt-vagrant/
+
 ## Wireguard manuaalisesti
+
+Wireguardin asennukseen löytyi ohjeet sen omilta sivuilta. 
+
+### Lähteet
+
+https://www.wireguard.com/quickstart/
 
 ## Palvelimet osa 2.
 
