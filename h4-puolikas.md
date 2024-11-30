@@ -8,7 +8,7 @@ Tehtävässä h4 tuli tehdä ensimmäinen vedos kurssilla tehtävästä moduulis
 
 _Alustava suunnitelma_
 
-## Palvelimet osa 1.
+## Palvelimet
 
 Käytin palvelinten asentamiseen Vagranttia, sillä se on tehokas tapa luoda uusia palvelimia projektia varten ja se sopii hyvin kurssin `Infrastructure as code`-teemaan. Asensin ensin kahdet palvelimet, joista toinen on palvelin johon muodostetaan VPN yhteys ja toinen on palvelin, johon Wireguard konfiguroidaan.
 
@@ -47,6 +47,12 @@ Seuraavaksi loin avaimet yhteyttä varten molemmilla koneilla.
 
 https://www.wireguard.com/quickstart/
 
-## Palvelimet osa 2.
-
 ## Wireguard Saltilla
+
+Valmis moduuli vaatii vielä tämän lataamisen, konfiguroinnin ja ajamisen Saltin avulla. Suunnitelmissa oli tehdä näistä kolmesta omat `.sls`-tiedostot, jotka ajan yhdellä `.top`-tilalla. Jos moduuli osoittautuu Saltin osalta helpoksi, voin vielä lisätä monia ominaisuuksia, jotka tekevät VPN-yhteydestä vielä turvallisemman.
+
+### Yleiset lähteet
+
+Pohjana Tero Karvinen 2024: Palvelinten hallinta -kurssi, http://terokarvinen.com
+
+Tätä dokumenttia saa kopioida ja muokata GNU General Public License (versio 2 tai uudempi) mukaisesti. http://www.gnu.org/licenses/gpl.html
