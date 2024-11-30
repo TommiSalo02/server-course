@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/ef1828d5-e793-4c82-9da9-0970c48f0fad)# h4 Puolikas
+# h4 Puolikas
 
 ## Johdanto
 
@@ -12,13 +12,15 @@ _Alustava suunnitelma_
 
 Käytin palvelinten asentamiseen Vagranttia, sillä se on tehokas tapa luoda uusia palvelimia projektia varten ja se sopii hyvin kurssin `Infrastructure as code`-teemaan. Asensin ensin kahdet palvelimet, joista toinen on palvelin johon muodostetaan VPN yhteys ja toinen on palvelin, johon Wireguard konfiguroidaan.
 
-Asensin palvelimet uuteen kansioon `wireguard-project`. Vagranttia varten loin konfigurointitiedoston `Vagrantfile`. 
+Asensin palvelimet uuteen kansioon `wireguard-project`. Vagranttia varten loin konfigurointitiedoston `Vagrantfile`. Tiedoston luomisen jälkeen palvelimet voi luoda komennolla `vagrant up`.
 
-![image](https://github.com/user-attachments/assets/c63100ce-b40c-4563-b837-f2af4c5f4e86)
+![image](https://github.com/user-attachments/assets/ef1828d5-e793-4c82-9da9-0970c48f0fad)
 
 _Ensimmäset palvelimet_
 
+![image](https://github.com/user-attachments/assets/42969de1-8994-4839-86ab-a3613e220279)
 
+_vagrant up_
 
 ## Wireguard manuaalisesti
 
