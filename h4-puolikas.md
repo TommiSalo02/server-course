@@ -18,11 +18,9 @@ Asensin palvelimet uuteen kansioon `wireguard-project`. Vagranttia varten loin k
 
 _Ensimmäset palvelimet_
 
-![image](https://github.com/user-attachments/assets/42969de1-8994-4839-86ab-a3613e220279)
+![image](https://github.com/user-attachments/assets/2daef2eb-2277-473c-8355-abd4779d2a53)
 
-_vagrant up_
-
-Palvelinten luomisen jälkeen asensin `Wireguard`-sovelluksen
+_vagrant created_
 
 ### Lähteet
 
@@ -30,7 +28,15 @@ https://terokarvinen.com/2023/salt-vagrant/
 
 ## Wireguard manuaalisesti
 
-Wireguardin asennukseen löytyi ohjeet sen omilta sivuilta. 
+Wireguardin asennukseen löytyi ohjeet sen omilta sivuilta. Aloitin lataamalla sen molemmille palvelimille komennolla `sudo apt-get install wireguard` Tämän jälkeen tein myös yhteyskokeilut virtuaalikoneiden välillä.
+
+![image](https://github.com/user-attachments/assets/8f814c68-6544-4995-90cd-531b17906a6a)
+
+_vagrant@server_
+
+![image](https://github.com/user-attachments/assets/f2be1b05-c23c-4600-bfa7-bc3f031fde66)
+
+_vagrant@client_
 
 ### Lähteet
 
