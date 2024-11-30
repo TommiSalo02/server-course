@@ -70,6 +70,22 @@ _client (10.0.0.1 / 192.168.82.101) komennot_
 
 _Wireguard yhteyskokeilu_
 
+## Salty
+
+Tarvitsin vielä Saltin osaksi moduulia, jotta se voi demonstroida kurssilla opittuja asioita. Tätä varten lisäsin `Vagrantfile`-tiedostoon uuden virtuaalikoneen `master`. Tämä demonstroi hyvin Vagrantin hyviä puolia, sillä uuden virtuaalikoneen lisääminen oli helppoa kuin heinänteko.
+
+```
+config.vm.define "master" do |master|
+		master.vm.network "private_network", ip: "192.168.12.103"
+		master.vm.hostname = "master"
+	end
+```
+
+Tässä moduulissa master toimii herrana ja client orjana. Orjia voi myös lisätä myöhemmin, sillä järjestelmä skaalautuu vapaasti.
+
+Latasin molemmille virtuaalikoneille Salt-repon ja oman salt tiedostonsa. Tämän jälkeen konfiguroin ip-osoitteet järjestykseen ja hyväksyin avaimen.
+
+
 ### Lähteet
 
 https://www.wireguard.com/quickstart/
