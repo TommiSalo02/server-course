@@ -14,7 +14,7 @@ Käytin palvelinten asentamiseen Vagranttia, sillä se on tehokas tapa luoda uus
 
 Asensin palvelimet uuteen kansioon `wireguard-project`. Vagranttia varten loin konfigurointitiedoston `Vagrantfile`. Tiedoston luomisen jälkeen palvelimet voi luoda komennolla `vagrant up`.
 
-![image](https://github.com/user-attachments/assets/7e0a207a-20a4-4867-bc67-77cddde74d57)
+![image](https://github.com/user-attachments/assets/76ca7408-f430-458d-9bca-fc9d21b612f6)
 
 _Ensimmäset palvelimet_
 
