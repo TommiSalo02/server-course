@@ -42,14 +42,37 @@ Seuraavaksi loin avaimet yhteyttä varten molemmilla koneilla.
 
 ![image](https://github.com/user-attachments/assets/fafaf1a1-28df-4cfd-bcf3-35b2964cd935)
 
+Olin aikaisemmin konfiguroinut Wireguardia konfigurointi-tiedostolla (jolla teen myös lopullisen moduulin), mutta tällä kertaa halusin harjoittella ensin yhteyden luomista komennoilla.
+
+```
+ip link add dev wg0 type wireguard
+
+ip addr add 10.0.0.1/24 dev wg0 
+
+wg set wg0 private-key ./privatekey
+
+ip link set wg0 up
+
+wg set wg0 listen-port 51820
+
+sudo wg set wg0 peer FSao085rtXF/r2/cHxyH3yZNmGeeGk68039I0hd93zw= allowed-ips 10.0.0.2/32 endpoint 192.168.12.102:51820
+```
+
+_client (10.0.0.1 / 192.168.82.101) komennot_
+
+![image](https://github.com/user-attachments/assets/bdd05ca9-06a3-4d5f-9fb5-8715619ed313)
+
+_Wireguard yhteyskokeilu_
 
 ### Lähteet
 
 https://www.wireguard.com/quickstart/
 
+https://ubuntu.com/server/docs/introduction-to-wireguard-vpn
+
 ## Wireguard Saltilla
 
-Valmis moduuli vaatii vielä tämän lataamisen, konfiguroinnin ja ajamisen Saltin avulla. Suunnitelmissa oli tehdä näistä kolmesta omat `.sls`-tiedostot, jotka ajan yhdellä `.top`-tilalla. Jos moduuli osoittautuu Saltin osalta helpoksi, voin vielä lisätä monia ominaisuuksia, jotka tekevät VPN-yhteydestä vielä turvallisemman.
+Valmis moduuli vaatii vielä tämän lataamisen, konfiguroinnin ja ajamisen Saltin avulla. Suunnitelmissa oli tehdä näistä kolmesta omat `.sls`-tiedostot, jotka ajan yhdellä `.top`-tilalla. Jos moduuli osoittautuu Saltin osalta helpoksi, voin vielä lisätä monia ominaisuuksia, jotka tekevät VPN-yhteydestä vielä turvallisemman. Tämän lisäksi tulisi vielä luoda loput palvelimista, elikkä `salt-master` ja kenties toinen testi `minion`.
 
 ### Yleiset lähteet
 
