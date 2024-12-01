@@ -24,7 +24,7 @@ _vagrant created_
 
 ### Lähteet
 
-https://terokarvinen.com/2023/salt-vagrant/
+Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves. Luettavissa: https://terokarvinen.com/2023/salt-vagrant/. Luettu: 30.11.2024
 
 ## Wireguard manuaalisesti
 
@@ -83,18 +83,17 @@ config.vm.define "master" do |master|
 
 Tässä moduulissa master toimii herrana ja client orjana. Orjia voi myös lisätä myöhemmin, sillä järjestelmä skaalautuu vapaasti.
 
-Latasin molemmille virtuaalikoneille Salt-repon ja oman salt tiedostonsa. Tämän jälkeen konfiguroin ip-osoitteet järjestykseen ja hyväksyin avaimen.
-
+Latasin molemmille virtuaalikoneille Salt-repon ja oman salt tiedostonsa. Tämän jälkeen konfiguroin ip-osoitteet haluttuun järjestykseen ja hyväksyin avaimen.
 
 ### Lähteet
 
-https://www.wireguard.com/quickstart/
+Wireguard: Quick Start. Luettavissa: https://www.wireguard.com/quickstart/. Luettu: 1.12.2024
 
-https://ubuntu.com/server/docs/introduction-to-wireguard-vpn
+Ubuntu Server: Introduction to WireGuard VPN. Luettavissa: https://ubuntu.com/server/docs/introduction-to-wireguard-vpn Luettu: 1.12.2024
 
-## Wireguard Saltilla
+## Jatkoa Moduuliin
 
-Valmis moduuli vaatii vielä tämän lataamisen, konfiguroinnin ja ajamisen Saltin avulla. Suunnitelmissa oli tehdä näistä kolmesta omat `.sls`-tiedostot, jotka ajan yhdellä `.top`-tilalla. Jos moduuli osoittautuu Saltin osalta helpoksi, voin vielä lisätä monia ominaisuuksia, jotka tekevät VPN-yhteydestä vielä turvallisemman. Tämän lisäksi tulisi vielä luoda loput palvelimista, elikkä `salt-master` ja kenties toinen testi `minion`.
+Lopputilanteessa olin tehnyt tarvittavat palvelimet, asentanut Saltin ja luonut yhteyden Wireguardilla. Valmiissa moduulissa tekisin Wireguardin asentamisen, konfiguroinnin ja ajamisen Saltin avulla. Suunnitelmissa oli tehdä näistä kolmesta omat `.sls`-tiedostot, jotka ajan yhdellä `.top`-tilalla. Jos moduuli osoittautuu Saltin osalta helpoksi, voin vielä lisätä monia ominaisuuksia, jotka tekevät VPN-yhteydestä vielä turvallisemman. 
 
 ### Yleiset lähteet
 
