@@ -26,7 +26,44 @@ Saltin asennus on melko yksinkertainen prosessi, mutta vaatii useamman palvelun 
 
 ## Wireguard
 
-Viimeinen vaihe on Wireguardin lataaminen, konfigurointi ja käynnistäminen. Tämä voidaan automatisoida Saltin avulla.
+Viimeinen vaihe on Wireguardin lataaminen, konfigurointi ja käynnistäminen. Tämä voidaan automatisoida Saltin avulla. Aluksi tuli luoda uusi kansio `/srv/salt`, johon voin luoda Saltin tiedostot. Kokeilin ensin ajaa yksinkertaisen Wireguardin asennus `init.sls`-tiedoston `wireguard`-kansiosta, jotta näkisin, että homma toimii.
+
+![image](https://github.com/user-attachments/assets/627ee475-211b-4da7-baed-110b0ce23926)
+
+![image](https://github.com/user-attachments/assets/663c15e0-ecb2-4d4c-9fae-a3cb4c316ad5)
+
+Molemmat palvelimet latasivat työkalun ja ovat idempotenssissa. Tästä oli hyvä jatkaa eteenpäin.
+
+Seuraava osuus oli yksityisten ja julkisten avaimen luominen, sillä niitä tarvitsee konfiguroinnissa. Loin uuden kansion `keygen`, jossa `init.sls`-tiedosto luo uudet avaimet uuteen kansioon `/etc/wireguard/keys`.
+
+```
+# Create key folder
+create-key-folder:
+  file.directory:
+    - name: /etc/wireguard/keys
+    - user: root
+    - group: root
+    - mode: 700
+
+# Generate private key
+generate-private-key:
+  cmd.run:
+    - name: wg genkey | tee /etc/wireguard/keys/privatekey
+    - creates: /etc/wireguard/keys/privatekey
+    - require:
+        - file: create-key-folder
+
+# Generate public key from private key
+generate-public-key:
+  cmd.run:
+    - name: cat /etc/wireguard/keys/privatekey | wg pubkey > /etc/wireguard/keys/publickey
+    - creates: /etc/wireguard/keys/publickey
+    - require:
+        - cmd: generate-private-key
+```
+
+Seuraavaksi tuli ajaa itse konfigurointi-tiedostot `client` ja `server` -palvelimille. Käyttämällä `top.sls`-tiedostoa, pystyin luoda kahdet konfigurointi-tiedostot ja ajaa ne kummallekin laitteelle. Samalla lisäsin osion, joka näyttää yhteyden tilan.
+
 
 ### Lähteet
 https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html
