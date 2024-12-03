@@ -118,6 +118,7 @@ Skaalautuvuuden pyrin ratkaisemaan mahdollisimman yksinkertaisesti. Muutin `top.
 
 Tällä tapaa voin antaa uusille koneille Grain-roolin `client`, jolloin ne saavat käyttäjän asetukset Saltista. Nämä koneet saavat automaattisesti uuden avaimen jos aikaisempaa ei ole, joten niiden kannalta skaalautuvuus on myös hyvä. Pääongelmaksi muodostui IP-osoite, joka on staattinen konfigurointi. Tämän vuoksi vain yksi kone voi olla kerrallaan yhteydessä palvelimeen. Tämä on projektin skaalan kannalta aivan OK ratkaisu, joten en lähtenyt koodaamaan dynamista IP-osoitteiden jakamista.
 
+Avainten hakuongelmaan koitin ensin Saltin `pillar`-toimintoa. Tämä osoittautui kuitenkin melko hankalaksi. Konfigurointi tiedostojen kopioiminen talteen osoittautui hyödylliseksi, sillä sain ympäristön takaisin henkiin varsin pikaisesti.
 
 
 ### Lähteet
