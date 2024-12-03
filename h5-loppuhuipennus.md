@@ -93,7 +93,21 @@ PublicKey = 3LWT2huMiLbgZ+LEmd11aZkGfcTQ9+l+tlDkHEsqOkY=
 AllowedIPs = 10.0.0.2/32
 ```
 
-Näistä konfigurointi-tiedostoista puuttuu aluksi vielä avaimet, joten lisäsin ne manuaalisesti. Avainten nouto palvelimilta konfiguraatioon oli projektin teknisesti haastavin osio.
+Näistä konfigurointi-tiedostoista puuttuu aluksi vielä avaimet, joten lisäsin ne manuaalisesti. Avainten nouto palvelimilta konfiguraatioon tulisi olemaan projektin teknisesti haastavin osio.
+
+Tässä vaiheessa olisi kasassa idempotentti kokonaisuus, joka ajaa kahdelle palvelimelle yhdellä käskyllä wireguardin latauksen, sen avainten luomisen ja konfigurointi-tiedostojen lataamisen oikeisiin kansioihin.
+
+![image](https://github.com/user-attachments/assets/111122a3-bd52-4991-a2b5-f05601265120)
+
+_Idempotentti kokonaisuus_
+
+![image](https://github.com/user-attachments/assets/0a126e0a-b269-4995-b5ee-bc2484e1e415)
+
+_Kättelyt onnistuvat_
+
+Täten wireguard lähti toimimaan ilman sen suurempaa manuaalista työtä. Nyt jäljelle jäi vielä järjestelmän skaalattavuus ja avainten automaattinen haku.
+
+
 
 ### Lähteet
 https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html
