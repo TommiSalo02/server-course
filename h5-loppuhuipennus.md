@@ -68,7 +68,9 @@ Tätä varten piti käyttää `cmd.run`-toimintoa, mutta lisätyt vaatimukset te
 
 Seuraavaksi tuli ajaa itse konfigurointi-tiedostot `client` ja `server` -palvelimille `master`-palvelimelta. Tein tätä varten `top.sls`-tiedoston joka ajaa kummallekin palvelimelle oman konfiguraationsa. Tämä ei ollut skaalautuva tapa, mutta se toimii väliaikaisesti.
 
-![image](https://github.com/user-attachments/assets/04a2a6fd-c25f-4906-bbbe-869a53e76265)
+![image](https://github.com/user-attachments/assets/5ee8c62e-3d50-4b06-a18c-263a62e0878a)
+
+_Hakemistorakenne & top.sls_
 
 ```
 [Interface]
@@ -106,6 +108,15 @@ _Idempotentti kokonaisuus_
 _Kättelyt onnistuvat_
 
 Täten wireguard lähti toimimaan ilman sen suurempaa manuaalista työtä. Nyt jäljelle jäi vielä järjestelmän skaalattavuus ja avainten automaattinen haku.
+
+Skaalautuvuuden pyrin ratkaisemaan mahdollisimman yksinkertaisesti. Muutin `top.sls`-tiedostoon kohdan 'client' kohdaksi;
+
+```
+'G@role:client':
+    - config.client
+```
+
+Tällä tapaa voin antaa uusille koneille Grain-roolin `client`, jolloin ne saavat käyttäjän asetukset Saltista. Nämä koneet saavat automaattisesti uuden avaimen jos aikaisempaa ei ole, joten niiden kannalta skaalautuvuus on myös hyvä. Pääongelmaksi muodostui IP-osoite, joka on staattinen konfigurointi. Tämän vuoksi vain yksi kone voi olla kerrallaan yhteydessä palvelimeen. Tämä on projektin skaalan kannalta aivan OK ratkaisu, joten en lähtenyt koodaamaan dynamista IP-osoitteiden jakamista.
 
 
 
