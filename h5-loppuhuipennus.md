@@ -37,8 +37,8 @@ Molemmat palvelimet latasivat työkalun ja ovat idempotenssissa. Tästä oli hyv
 Seuraava osuus oli yksityisten ja julkisten avaimen luominen, sillä niitä tarvitsee konfiguroinnissa. Loin uuden kansion `keygen`, jossa `init.sls`-tiedosto luo uudet avaimet uuteen kansioon `/etc/wireguard/keys`.
 
 ```
-# Create key folder
-create-key-folder:
+# Create key directory
+create-key-directory:
   file.directory:
     - name: /etc/wireguard/keys
     - user: root
@@ -51,9 +51,9 @@ generate-private-key:
     - name: wg genkey | tee /etc/wireguard/keys/privatekey
     - creates: /etc/wireguard/keys/privatekey
     - require:
-        - file: create-key-folder
+        - file: create-key-directory
 
-# Generate public key from private key
+# Generate public key
 generate-public-key:
   cmd.run:
     - name: cat /etc/wireguard/keys/privatekey | wg pubkey > /etc/wireguard/keys/publickey
@@ -62,7 +62,11 @@ generate-public-key:
         - cmd: generate-private-key
 ```
 
-Seuraavaksi tuli ajaa itse konfigurointi-tiedostot `client` ja `server` -palvelimille. Käyttämällä `top.sls`-tiedostoa, pystyin luoda kahdet konfigurointi-tiedostot ja ajaa ne kummallekin laitteelle. Samalla lisäsin osion, joka näyttää yhteyden tilan.
+Tätä varten piti käyttää `cmd.run`-toimintoa, mutta lisätyt vaatimukset tekevät koodista idempotentin siitä huolimatta.
+
+![image](https://github.com/user-attachments/assets/058c020d-ed97-4405-ac5d-ccf20fead646)
+
+Seuraavaksi tuli ajaa itse konfigurointi-tiedostot `client` ja `server` -palvelimille. Käyttämällä `top.sls`-tiedostoa, pystyin luoda kahdet konfigurointi-tiedostot ja ajaa ne kummallekin laitteelle. 
 
 
 ### Lähteet
