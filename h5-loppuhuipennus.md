@@ -66,8 +66,41 @@ Tätä varten piti käyttää `cmd.run`-toimintoa, mutta lisätyt vaatimukset te
 
 ![image](https://github.com/user-attachments/assets/058c020d-ed97-4405-ac5d-ccf20fead646)
 
-Seuraavaksi tuli ajaa itse konfigurointi-tiedostot `client` ja `server` -palvelimille. Käyttämällä `top.sls`-tiedostoa, pystyin luoda kahdet konfigurointi-tiedostot ja ajaa ne kummallekin laitteelle. 
+Seuraavaksi tuli ajaa itse konfigurointi-tiedostot `client` ja `server` -palvelimille `master`-palvelimelta.
 
+```
+# Ensure directory for storing WireGuard configurations exists
+create-config-directory:
+  file.directory:
+    - name: /etc/wireguard
+    - user: root
+    - group: root
+    - mode: 700
+
+# Copy server configuration
+configure-server:
+  file.managed:
+    - name: /etc/wireguard/wg0.conf
+    - source: salt://config/wg0-server.conf
+    - user: root
+    - group: root
+    - mode: 600
+    - require:
+        - file: create-config-directory
+
+# Copy client configuration
+configure-client:
+  file.managed:
+    - name: /etc/wireguard/wg0.conf
+    - source: salt://config/wg0-client.conf
+    - user: root
+    - group: root
+    - mode: 600
+    - require:
+        - file: create-config-directory
+```
+
+Näistä konfigurointi-tiedostoista puuttuu vielä avaimet, joten lisäsin ne aluksi manuaalisesti.
 
 ### Lähteet
 https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html
