@@ -2,7 +2,7 @@
 
 ## Johdanto
 
-Tehtävässä h5 tuli tehdä oma moduuli esitysvalmiiksi. Aloitin oman Wireguard projektin viime viikolla tehtävässä h4. Siinä osiossa sain kaiken toimimaan manuaalisesti, elikkä Wireguard yhteys ja Salt olivat testattu. Seuraavaksi pyrin tekemään mahdollisimman paljon tästä asennuksesta automaattisesti Saltilla. Kolmas vaihe olisi automatisoida myös Saltin asennus, jolloin projektin voisi kloonata gitistä ja sen voisi saada pystyyn vain muutamalla komennolla. 
+Tehtävässä h5 tuli tehdä oma moduuli esitysvalmiiksi. Aloitin oman Wireguard projektin viime viikolla tehtävässä h4. Siinä osiossa sain kaiken toimimaan manuaalisesti, elikkä Wireguard yhteys ja Salt olivat testattu halutussa konfiguraatiossa. Seuraavaksi pyrin tekemään mahdollisimman paljon tästä asennuksesta automaattisesti Saltilla. Kolmas vaihe olisi automatisoida myös Saltin asennus, jolloin projektin voisi kloonata gitistä ja sen voisi saada pystyyn vain muutamalla komennolla. 
 
 ## Github
 
@@ -66,41 +66,34 @@ Tätä varten piti käyttää `cmd.run`-toimintoa, mutta lisätyt vaatimukset te
 
 ![image](https://github.com/user-attachments/assets/058c020d-ed97-4405-ac5d-ccf20fead646)
 
-Seuraavaksi tuli ajaa itse konfigurointi-tiedostot `client` ja `server` -palvelimille `master`-palvelimelta.
+Seuraavaksi tuli ajaa itse konfigurointi-tiedostot `client` ja `server` -palvelimille `master`-palvelimelta. Tein tätä varten `top.sls`-tiedoston joka ajaa kummallekin palvelimelle oman konfiguraationsa. Tämä ei ollut skaalautuva tapa, mutta se toimii väliaikaisesti.
+
+![image](https://github.com/user-attachments/assets/04a2a6fd-c25f-4906-bbbe-869a53e76265)
 
 ```
-# Ensure directory for storing WireGuard configurations exists
-create-config-directory:
-  file.directory:
-    - name: /etc/wireguard
-    - user: root
-    - group: root
-    - mode: 700
+[Interface]
+PrivateKey = ePzWO9Lo+0wthHDAVBnv03Wz80ZmI3iJ2xIm6XZQomc=
+Address = 10.0.0.2/24
+SaveConfig = true
 
-# Copy server configuration
-configure-server:
-  file.managed:
-    - name: /etc/wireguard/wg0.conf
-    - source: salt://config/wg0-server.conf
-    - user: root
-    - group: root
-    - mode: 600
-    - require:
-        - file: create-config-directory
-
-# Copy client configuration
-configure-client:
-  file.managed:
-    - name: /etc/wireguard/wg0.conf
-    - source: salt://config/wg0-client.conf
-    - user: root
-    - group: root
-    - mode: 600
-    - require:
-        - file: create-config-directory
+[Peer]
+PublicKey = KYhT627CQnCsibVZnkf3MWQQvWGIYc1SRUrf/WY2eFM=
+Endpoint = 192.168.12.101:51820
+AllowedIPs = 10.0.0.0/24
 ```
 
-Näistä konfigurointi-tiedostoista puuttuu vielä avaimet, joten lisäsin ne aluksi manuaalisesti.
+```
+PrivateKey = +JoRmz8hdzJnfczRv2OszVH6hnPGFBTa8C7WTSjS+W8=
+Address = 10.0.0.1/24
+ListenPort = 51820
+SaveConfig = true
+
+[Peer]
+PublicKey = 3LWT2huMiLbgZ+LEmd11aZkGfcTQ9+l+tlDkHEsqOkY=
+AllowedIPs = 10.0.0.2/32
+```
+
+Näistä konfigurointi-tiedostoista puuttuu aluksi vielä avaimet, joten lisäsin ne manuaalisesti. Avainten nouto palvelimilta konfiguraatioon oli projektin teknisesti haastavin osio.
 
 ### Lähteet
 https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html
