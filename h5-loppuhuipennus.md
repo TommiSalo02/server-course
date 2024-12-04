@@ -118,8 +118,19 @@ Skaalautuvuuden pyrin ratkaisemaan mahdollisimman yksinkertaisesti. Muutin `top.
 
 Tällä tapaa voin antaa uusille koneille Grain-roolin `client`, jolloin ne saavat käyttäjän asetukset Saltista. Nämä koneet saavat automaattisesti uuden avaimen jos aikaisempaa ei ole, joten niiden kannalta skaalautuvuus on myös hyvä. Pääongelmaksi muodostui IP-osoite, joka on staattinen konfigurointi. Tämän vuoksi vain yksi kone voi olla kerrallaan yhteydessä palvelimeen. Tämä on projektin skaalan kannalta aivan OK ratkaisu, joten en lähtenyt koodaamaan dynamista IP-osoitteiden jakamista.
 
-Avainten hakuongelmaan koitin ensin Saltin `pillar`-toimintoa. Tämä osoittautui kuitenkin melko hankalaksi. Konfigurointi tiedostojen kopioiminen talteen osoittautui hyödylliseksi, sillä sain ympäristön takaisin henkiin varsin pikaisesti.
+Avainten hakuongelmaan koitin ensin Saltin `pillar`-toimintoa. Tämä osoittautui kuitenkin melko hankalaksi. Konfigurointi tiedostojen kopioiminen talteen osoittautui hyödylliseksi, sillä sain ympäristön takaisin henkiin varsin pikaisesti. Tämän jälkeen koitin suorittaa saman yksinkertaisilla `cmd`-tilafunktioilla ja `jinja`-muuttujilla ja ties millä. Kaikissa tuli kuitenkin uusia ongelmia vastaan.
 
+Loppujen lopuksi alkoi aika käydä vähiin, joten loin vaan tiedoston, jonka komennoilla voi manuaalisesti hakea avaimet masterilla ja löydä ne oikeaan tiedostoon. Tämä on kaukana ideaalista, mutta uudet työkalut ja komennot eivät tähän hätään taittuneet niin hyvin kuin halusin. Samalla Saltin automatisointi jäi tältä erää tekemättä.
+
+Eli mitä jäi käteen lopuksi? Loin projektissa Salt-kokonaisuuden, jolla voi luoda Wireguard yhteyden ajamalla `top.sls`-tiedoston. Puutteeksi jäi avaimet, jotka pitää vielä syöttää käsin (mutta ne saa selkeästi näkyviin masterissa yhdellä komennolla). Samalla itse Saltin asennus, konfigurointi ja avainten hyväksyminen jäi käyttäjän käsiin. 
+
+Kokonaisuudessaan projekti on varsin hyvä tarkoitukseensa, mutta siinä olisi vielä paljon parantamisen varaa. Tärkeintä oli ehkä se, että opin itse projektin aikana paljon.
+
+Projekti on saatavissa Github sivulta: https://github.com/TommiSalo02/wireguard-project.
+
+![image](https://github.com/user-attachments/assets/6fdfb7a3-ff57-47e1-9767-691557ad9685)
+
+_Topologia kansiossa_
 
 ### Lähteet
 https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html
