@@ -126,7 +126,7 @@ Eli mitä jäi käteen lopuksi? Loin projektissa Salt-kokonaisuuden, jolla voi l
 
 Kokonaisuudessaan projekti on varsin hyvä tarkoitukseensa, mutta siinä olisi vielä paljon parantamisen varaa. Tärkeintä oli ehkä se, että opin itse projektin aikana paljon.
 
-Projekti on saatavissa Github sivulta: https://github.com/TommiSalo02/wireguard-project.
+Projekti on saatavissa Github sivulta: [https://github.com/TommiSalo02/wireguard-project.](https://github.com/TommiSalo02/wireguard-salt-installer).
 
 ![image](https://github.com/user-attachments/assets/6fdfb7a3-ff57-47e1-9767-691557ad9685)
 
